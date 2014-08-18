@@ -12,7 +12,10 @@ if test x$LOG_DIR = 'x'; then
 fi
 
 nohup ${OPENSHIFT_DATA_DIR}/usr/bin/sbcl \
-    --core ${OPENSHIFT_DATA_DIR}/usr/lib/sbcl/sbcl-dist.core \
+    --core "${OPENSHIFT_DATA_DIR}/usr/lib/sbcl/sbcl-dist.core" \
     --eval "(setf sb-impl::*default-external-format* :UTF-8)" \
-    --eval "(require :webapp)" \
-    --eval "(webapp:start-webapp)" > ${LOG_DIR}/webapp.log 2>&1 &
+    --eval "(ql:quickload :hunchentoot)" \
+    --eval "(load \"${OPENSHIFT_REPO_DIR}/package.lisp\")" \
+    --eval "(load \"${OPENSHIFT_REPO_DIR}/webapp.lisp\")" \
+    --eval "(webapp:start-webapp)" \
+    --eval "(quit)"
