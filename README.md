@@ -42,6 +42,11 @@ Add this upstream lisp-openshift repo
     git remote add upstream -m master git://github.com/cheryllium/lisp-openshift.git
     git pull -s recursive -X theirs upstream master
 
+Commit everything
+
+    git add .
+    git commit -m "First commit"
+
 Then push the repo upstream
 
     git push
