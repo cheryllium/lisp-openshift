@@ -50,7 +50,7 @@ That's it!  You can now have a look at your application here:
 
     http://myapp-$namespace.rhcloud.com
  
-To see it in action, check out http://lisp2-atgreen.rhcloud.com.
+To see it in action, check out http://myapp-cheryllium.rhcloud.com.
 
 Using Quicklisp
 ---------------
