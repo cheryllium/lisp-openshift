@@ -14,6 +14,17 @@ contents of the SBCL RPM package from the Fedora Project's Extra
 Packages for Enterprise Linux (EPEL) repository.  This package is
 installed in your application's persistent `data` directory.
 
+Changes from Forked Repository
+------------------------------
+
+* Fixed code in .openshift/build 
+* Changed the port and ip variables from OPENSHIFT_INTERNAL_PORT 
+  and OPENSHIFT_INTERNAL_IP to OPENSHIFT_DIY_PORT and 
+  OPENSHIFT_DIY_IP
+
+Cheryl Yang & Brandon Bohrer
+
+
 Running on OpenShift
 --------------------
 
