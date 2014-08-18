@@ -38,8 +38,8 @@
 (defun start-webapp (&rest interactive)
   "Start the web application and have the main thread sleep forever,
   unless INTERACTIVE is non-nil."
-  (let ((openshift-ip   (sb-ext:posix-getenv "OPENSHIFT_INTERNAL_IP"))
- 	(openshift-port (sb-ext:posix-getenv "OPENSHIFT_INTERNAL_PORT")))
+  (let ((openshift-ip   (sb-ext:posix-getenv "OPENSHIFT_DIY_IP"))
+ 	(openshift-port (sb-ext:posix-getenv "OPENSHIFT_DIY_PORT")))
     (let ((ip (if openshift-ip openshift-ip *default-ip-string*))
 	  (port (if openshift-port openshift-port *default-port-string*)))
       (format t "** Starting hunchentoot @ ~A:~A~%" ip port)
